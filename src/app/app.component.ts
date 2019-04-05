@@ -22,7 +22,7 @@ export class AppComponent {
 
   constructor(private store: Store<{producto:IProducto}>) {
     store.pipe(select('productos')).subscribe(val =>{
-      this.productos = val.productos
+      this.productos = val.productos;
     });
   }
 
@@ -34,6 +34,7 @@ export class AppComponent {
       descripcion: '',
       precio: 0
     };
+    
   
   }
 
